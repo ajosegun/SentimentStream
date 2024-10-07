@@ -1,0 +1,6 @@
+secrets/*
+.env
+.DS_Store
+src/config/*
+yelp_academic_dataset_review.json
+venv
