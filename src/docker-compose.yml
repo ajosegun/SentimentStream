@@ -17,7 +17,7 @@ services:
       - "9090:8080"
       - "7077:7077"
     networks:
-      - code-with-yu
+      - nt-sentiment-analysis
 
   spark-worker: &worker
     container_name: spark-worker
@@ -39,7 +39,7 @@ services:
       SPARK_WORKER_MEMORY: 1g
       SPARK_MASTER_URL: spark://spark-master:7077
     networks:
-      - code-with-yu
+      - nt-sentiment-analysis
 
 #  spark-worker-2:
 #    <<: *worker
@@ -50,4 +50,4 @@ services:
 #  spark-worker-4:
 #    <<: *worker
 networks:
-  code-with-yu:
+  nt-sentiment-analysis:

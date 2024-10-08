@@ -4,10 +4,11 @@ import time
 import pandas as pd
 
 
-def send_data_over_socket(file_path, host="127.0.0.1", port=9999, chunk_size=2):
+def send_data_over_socket(file_path, host="spark-master", port=9999, chunk_size=2):
     # Create a socket object
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     print("Socket successfully created")
+    print(host, port)
     s.bind((host, port))
     print("Socket binded to %s" % (port))
 
