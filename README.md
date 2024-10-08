@@ -1,6 +1,6 @@
 ## Real Time Sentiment Analysis with LLama 3.1, Spark Streaming and Kafka
 
-SentimentStream is a real-time sentiment analysis system using Apache Spark, Kafka, and LLMs like LLama 3.1 and OpenAI models for processing customer reviews. It streams data, performs sentiment analysis, and stores the results in Kafka for further processing or visualization.
+SentimentStream is a real-time sentiment analysis system using Apache Spark, Kafka, and LLMs like LLama 3.1 and OpenAI models for processing customer reviews. It streams data, performs sentiment analysis, and stores the results in Kafka and sends the messages to Elastic Search for further processing.
 
 ## System Architecture
 
