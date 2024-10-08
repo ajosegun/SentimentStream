@@ -195,7 +195,7 @@ These queries can be used to analyze the sentiment data stored in Elasticsearch.
 ## Screenshots
 
 1. Kafka Topics on Confluent Cloud (Positive Sentiment)
-   ![Kafka Topics](images/confluent_kafka_topics.png)
+   ![Kafka Topics](images/confluent-topics.png)
 
 2. Kafka Topics on Confluent Cloud (Negative Sentiment)
    ![Kafka Topics](images/confluent-topics-neg.png)
@@ -205,6 +205,9 @@ These queries can be used to analyze the sentiment data stored in Elasticsearch.
 
 4. Elastic Search Queries
    ![Elastic Search Queries](images/es_dev_tools.png)
+
+5. If you have access to Azure AI Hub, you can view the models available to you.
+   ![Azure AI Hub](images/azure_ai_hub.png)
 
 ## Troubleshooting
 
