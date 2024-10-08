@@ -1,8 +1,48 @@
 ## Real Time Sentiment Analysis with LLama 3.1, Spark Streaming and Kafka
 
-An end-to-end data engineering pipeline using TCP/IP Socket, Apache Spark, LLama 3.1, Azure OpenAI or OpenAI LLM, Kafka and Elasticsearch. It covers each stage from data acquisition, processing, sentiment analysis with Large Language Model, production to kafka topic and connection to elasticsearch.
+SentimentStream is a real-time sentiment analysis system using Apache Spark, Kafka, and LLMs like LLama 3.1 and OpenAI models for processing customer reviews. It streams data, performs sentiment analysis, and stores the results in Kafka for further processing or visualization.
 
-![confluent-topics](images/confluent-topics.png)
+## System Architecture
+
+![System Architecture](images/system_architecture.png)
+
+## Table of Contents
+
+1. [Prerequisites](#prerequisites)
+2. [Project Structure](#project-structure)
+3. [Setup](#setup)
+4. [Running the Application](#running-the-application)
+5. [Monitoring and Debugging](#monitoring-and-debugging)
+6. [Customization](#customization)
+
+## Prerequisites
+
+- Docker and Docker Compose
+- Python 3.9+
+- Apache Spark 3.5.0+
+- Confluent Kafka account
+- Elastic Search Account
+- OpenAI API key or Azure OpenAI/AI Hub credentials
+
+## Project Structure
+
+```
+src/
+├── config/
+│ ├── config.py
+│ └── .env.example
+├── jobs/
+│ ├── spark-streaming.py
+│ └── streaming-socket.py
+├── schemas/
+│ └── reviews.schema.avsc
+├── datasets/
+│ └── yelp_academic_dataset_review.json
+├── Dockerfile.spark
+├── docker-compose.yml
+├── requirements.txt
+└── README.md
+```
 
 ## Setup
 
@@ -154,8 +194,17 @@ These queries can be used to analyze the sentiment data stored in Elasticsearch.
 
 ## Screenshots
 
-![Sink Connector on Confluent Cloud](images/conf_elasticsearch_service_sink_connector.png)
-![Elastic Search Queries](images/es_dev_tools.png)
+1. Kafka Topics on Confluent Cloud (Positive Sentiment)
+   ![Kafka Topics](images/confluent_kafka_topics.png)
+
+2. Kafka Topics on Confluent Cloud (Negative Sentiment)
+   ![Kafka Topics](images/confluent-topics-neg.png)
+
+3. Elastic Search Docs
+   ![ELastic Search Docs](images/es_customer_review_docs.png)
+
+4. Elastic Search Queries
+   ![Elastic Search Queries](images/es_dev_tools.png)
 
 ## Troubleshooting
 

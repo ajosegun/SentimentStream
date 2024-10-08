@@ -31,6 +31,6 @@
     }
   ],
   "name": "customers_review_schema",
-  "namespace": "com.airscholar",
+  "namespace": "com.sentimentstream",
   "type": "record"
 }
