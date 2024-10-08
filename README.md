@@ -1,3 +1,9 @@
+## Real Time Sentiment Analysis with LLama 3.1, Spark Streaming and Kafka
+
+An end-to-end data engineering pipeline using TCP/IP Socket, Apache Spark, LLama 3.1, Azure OpenAI or OpenAI LLM, Kafka and Elasticsearch. It covers each stage from data acquisition, processing, sentiment analysis with Large Language Model, production to kafka topic and connection to elasticsearch.
+
+![confluent-topics](images/confluent-topics.png)
+
 ## Setup
 
 1. Clone the repository:
@@ -145,6 +151,11 @@ These queries can be used to analyze the sentiment data stored in Elasticsearch.
 
 5. Scaling Workers:
    Uncomment additional worker services in `docker-compose.yml` to add more Spark workers.
+
+## Screenshots
+
+![Sink Connector on Confluent Cloud](images/conf_elasticsearch_service_sink_connector.png)
+![Elastic Search Queries](images/es_dev_tools.png)
 
 ## Troubleshooting
 
